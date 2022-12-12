@@ -1,0 +1,179 @@
+﻿body {
+	font-family:"Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+	font-size:1.5em;
+	background-color: #555;
+}
+nav {
+	width:100%;
+	height:auto;
+    background:linen;
+    text-align:center;
+	background-image: url('media/elCapback.jpeg');
+	background-repeat: no-repeat;
+	background-size: 100%;
+	box-shadow: 3px 3px 3px darkslategray;
+}
+nav a {
+    text-decoration:none;
+}
+nav ul li {
+	list-style:none;
+	border-bottom:gray 2px solid;
+	border-left:gray 2px solid;
+	text-align:center;
+	width:95%;
+	min-width:150px;
+	font-size:.8em;
+	margin-left:-17px;
+	transition: transform 250ms;
+}
+nav ul li a:link, nav ul li a:visited {
+    display:block;
+    background:white;
+    color:black;
+   	text-decoration:none;
+}
+nav ul li a:hover, nav ul li a:active{
+    display:block;
+    background:black;
+    color:white;
+	transform: translateY(-3px);
+}
+a:link, a:visited, a:hover,a:active{
+	color:darkgray;
+	text-shadow:1px 1px black;
+}
+header{
+	width:100%;
+	margin-top:0%;
+	background:black;
+	padding-top:10px;
+	box-shadow:3px 3px #555;
+	font-size:1.5em;  
+	background-image: url(media/half-dome.webp);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: 50% 45%;
+}
+h1{
+	color:white;
+    text-shadow:3px 3px gray;	
+    text-align:center;
+    font-size:3vmax;
+}
+h2{
+	color:white;
+    text-shadow:3px 3px gray;	
+    text-align:center;
+    font-size:2vmax;
+	padding-top:10px;
+}
+h3{
+	color:solid black;
+	text-align: left;
+	padding-left:5px;
+}
+
+section, div{
+	background:antiquewhite;
+	padding:5px;
+	margin-top:0px;
+}
+aside {
+    background:darkgray;
+    padding: 25px;
+    text-align: center;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+	
+}
+footer {
+    background: black;
+    color: #ffffff;
+    text-align: right;
+    font-size: 12px;
+    padding: 15px;
+}
+img{
+	box-shadow:2px 2px #555;
+	min-width:150px;
+	width:100%;
+}
+.indent{
+	text-indent:10px;
+}
+.center{
+	margin-right:auto;
+	margin-left:auto;
+}
+.icon-bar {
+    width: 100%; /* Full-width */
+    background-color: slategray;
+    overflow: auto; /* Overflow due to float */
+}
+
+.icon-bar a {
+    float: left; /* Float links side by side */
+    text-align: center; /* Center-align text */
+    width: 33.3333%; /* Equal width (5 icons with 20% width each = 100%) */
+	height: auto;
+    padding: 12px 0; /* Some top and bottom padding */
+	padding-left: 0.0007%;
+	height:50%;
+    transition: all 0.3s ease; /* Add transition for hover effects */
+    color: white; /* White text color */
+    font-size: 36px; /* Increased font size */
+}
+
+.icon-bar a:hover {
+    background-color: #000; /* Add a hover color */
+}
+
+.title{ grid-area:h; }
+.menu{ grid-area:n;}
+.menu2{ grid-area:n;
+background-image: url(media/elCap2.jpeg); background-size: 100%; background-repeat: no-repeat;}
+.content{ grid-area:m; }
+.right{ grid-area:a; }
+.contact{ grid-area:f; }
+
+/* For mobile phones: */
+.grid-container{
+	display:grid;
+	grid-template-areas:
+		'h h h'
+		'n n n'
+		'm m a'
+		'f f f';
+	grid-gap:0px;
+	padding:4px;
+	background-color: solid black;
+}
+/* For tablets: */
+@media only screen and (min-width: 600px) {
+.grid-container{
+	display:grid;
+	grid-template-areas:
+		'h h h'
+		'm m n'
+		'm m a'
+		'f f f';
+	grid-gap:0px;
+	padding:5px;
+	background-color: solid black;
+}
+}
+
+/* For desktop: */
+@media only screen and (min-width: 768px) {
+.grid-container{
+	display:grid;
+	grid-template-areas:
+		'h h h h h h  '
+		'n m m m m a'
+		'f f f f f f';
+	grid-gap:0px;
+	padding:10px;
+	background-color: solid black;
+}
+}
+
